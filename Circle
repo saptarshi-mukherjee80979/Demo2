@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button type="button" onclick="myFunction()">Change Outside Colour!<button>
+<canvas id="myCanvas" width="930" height="650" style="border:5px solid #d3d3d3;">
+</canvas>
+
+<script = "text/javascript">
+// function to change the colour outside canvas
+function myFunction() {
+    document.body.style.backgroundColor = "blue";
+}
+// drawing the first smaller circle
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(450, 150, 80, 0, 2 * Math.PI);
+ctx.stroke();
+// function to draw another bigger circle with bigger radius
+// the original circle is kept as it is
+function changeradius()
+{
+var c1 = document.getElementById("myCanvas");
+var ctx1 = c1.getContext("2d");
+ctx1.beginPath();
+ctx1.arc(450, 480, 130, 0, 2 * Math.PI);
+ctx1.stroke();
+}
+
+</script> 
+
+<button type="button" onclick="changeradius()">Change radius!</button>
+</body>
+</html>
