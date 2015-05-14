@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#wt {
+    position: absolute;
+    left: 830px;
+    top: 530px;
+	Height: 30px;
+Width: 180px;
+text-align: center; 
+background-color: #FFD700;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+#ht {
+    position: absolute;
+    left: 830px;
+    top: 450px;
+	Height: 30px;
+Width: 180px;
+text-align: center; 
+background-color: #6495ED;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+#width1 {
+    position: absolute;
+    left: 830px;
+    top: 570px;
+	Height: 20px;
+Width: 180px;
+}
+
+#height1 {
+    position: absolute;
+    left: 830px;
+    top: 490px;
+	Height: 20px;
+    Width: 180px;
+}
+
+#Button1 {
+position: absolute;
+    left: 830px;
+    top: 600px;
+
+Height: 30px;
+Width: 180px;
+background-color: #820404;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+
+}
+
+#Button1:hover {
+
+background-color: #E9967A;
+
+}
+
+
+#Button2 {
+position: absolute;
+    left: 830px;
+    top: 640px;
+
+Height: 30px;
+Width: 180px;
+background-color: #820404;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+
+}
+
+#Button2:hover {
+
+background-color: #E9967A;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+</canvas>
+<br>
+<label id="ht">HEIGHT</label><br>
+<input id= "height1" type="text" name="value1" value="">
+<br>
+<label id="wt">WIDTH</label>
+<input id = "width1" type="text" name="value2" value="">
+<br>
+
+<script type = "text/javascript">
+// function for taking inputs of height and width and drawing rectangle
+function myFunction()
+{
+var c1 = document.getElementById("myCanvas");
+var ctx1 = c1.getContext("2d");
+var h1= document.getElementById("height1").value;
+var w1= document.getElementById("width1").value;
+ctx1.rect(100, 100, w1, h1);
+ctx1.stroke();
+}
+// function to clear the rectangle present in canvas
+function clear1()
+{
+var c2 = document.getElementById("myCanvas");
+// refreshing the total canvas
+c2.width=c2.width;
+}
+
+</script> 
+
+
+<button id="Button1" type="button" onclick="myFunction()">Draw</button>
+<button id="Button2" type="button" onclick="clear1()">CLEAR</button>
+
+</body>
+</html>
