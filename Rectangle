@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+</canvas>
+
+<script type = "text/javascript">
+// drawing first rectangle
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.rect(20, 20, 150, 100);
+ctx.stroke();
+// function to draw second rectangle with changed width
+function myFunction()
+{
+var w = document.getElementById("myCanvas");
+var ctx1 = c.getContext("2d");
+ctx1.rect(20, 140, 300, 100);
+ctx1.stroke();
+}
+// function to third rectangle with changed height
+function myFunction1()
+{
+var h = document.getElementById("myCanvas");
+var ctx2 = c.getContext("2d");
+ctx2.rect(20, 280, 300, 300);
+ctx2.stroke();
+}
+
+</script> 
+<button type="button" onclick="myFunction()">Change Width!</button>
+<button type="button" onclick="myFunction1()">Change Height!</button>
+</body>
+</html>
