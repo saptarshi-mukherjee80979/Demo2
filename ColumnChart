@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+
+.graph {
+	width: 800px;
+	height: 600px;
+	position: relative;
+
+	border: 1px solid #aeaeae;
+	background-color: #0099FF;
+}
+.bar {
+	margin: 3px;
+	display: inline-block;
+	position: absolute;
+    bottom: 2px;
+	background-color: #FF3333;
+	vertical-align: baseline;
+}
+
+
+
+#ht {
+    position: absolute;
+    left: 830px;
+    top: 100px;
+	Height: 30px;
+Width: 180px;
+text-align: center; 
+background-color: #6495ED;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+#wt {
+    position: absolute;
+    left: 830px;
+    top: 250px;
+	Height: 30px;
+Width: 180px;
+text-align: center; 
+background-color: #6495ED;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+#width1 {
+    position: absolute;
+    left: 830px;
+    top: 300px;
+	Height: 20px;
+Width: 180px;
+}
+
+#height1 {
+    position: absolute;
+    left: 830px;
+    top: 150px;
+	Height: 20px;
+    Width: 180px;
+}
+
+
+#Button1 {
+position: absolute;
+    left: 830px;
+    top: 200px;
+
+Height: 30px;
+Width: 180px;
+background-color: #820404;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+
+}
+
+#Button1:hover {
+
+background-color: #E9967A;
+
+}
+#Button2 {
+position: absolute;
+	left: 830px;
+	top: 350px;
+	Height: 30px;
+Width: 180px;
+background-color: #820404;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+#Button2:hover {
+
+background-color: #E9967A;
+}
+#ht_ind {
+    position: absolute;
+    left: 830px;
+    top: 400px;
+	Height: 50px;
+Width: 180px;
+text-align: center; 
+background-color: #6495ED;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+#width2 {
+    position: absolute;
+    left: 830px;
+    top: 460px;
+	Height: 20px;
+Width: 180px;
+}
+#ht_ind1 {
+    position: absolute;
+    left: 830px;
+    top: 510px;
+	Height: 30px;
+Width: 180px;
+text-align: center; 
+background-color: #6495ED;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+#width3 {
+    position: absolute;
+    left: 830px;
+    top: 560px;
+	Height: 20px;
+Width: 180px;
+}
+#Button3 {
+position: absolute;
+	left: 830px;
+	top: 610px;
+	Height: 30px;
+Width: 180px;
+background-color: #820404;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+}
+#Button3:hover {
+
+background-color: #E9967A;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+<div class="graph">
+			<div id="bar1" style="height: 200px;left:0px;width: 25px; " class="bar">200</div>
+			<div id="bar2" style="height: 75px;left:75px;width: 25px;" class="bar">75</div>
+			<div id="bar3" style="height: 20px;left:150px;width: 25px;" class="bar">20</div>
+			<div id="bar4" style="height: 100px;left:225px;width: 25px;" class="bar">100</div>
+			<div id="bar5" style="height: 45px;left:300px;width: 25px;" class="bar">45</div>
+			<div id="bar6" style="height: 85px;left:375px;width: 25px;" class="bar">85</div>
+			<div id="bar7" style="height: 150px;left:450px;width: 25px;" class="bar">150</div>
+			<div id="bar8" style="height: 230px;left:525px;width: 25px;" class="bar">230</div>
+			<div id="bar9" style="height: 280px;left:600px;width: 25px;" class="bar">280</div>
+			<div id="bar10" style="height: 120px;left:675px;width: 25px;" class="bar">120</div>
+</div>
+
+<script type = "text/javaScript">
+// large gap between the bars
+// for the user to decrease the gaps as per choice by increasing bar widths
+
+
+// including all the bars in an array
+var divtag1=["bar1","bar2","bar3","bar4","bar5","bar6","bar7","bar8","bar9","bar10"];
+
+// function to change the height of all the bars together
+function change(){
+var x2=document.getElementById('height1').value;
+var i;
+for (i = 0; i < divtag1.length; i++) { 
+var x3=document.getElementById(divtag1[i]).style.height;
+
+var x4 = parseInt( x2, 10 ) + parseInt( x3, 10 ) + "px";
+
+var x5=parseInt( x2, 10 ) + parseInt( x3, 10 );
+document.getElementById(divtag1[i]).innerHTML=x5;
+document.getElementById(divtag1[i]).style.height=x4;
+};
+};
+
+// function to change the width of all the bars together
+function change1(){
+var x6 = document.getElementById('width1').value;
+var j;
+for (j = 0; j < divtag1.length; j++)
+{
+var x7 = document.getElementById(divtag1[j]).style.width
+var x8 = parseInt(x6,10) + parseInt(x7,10) + "px";
+//var x9 = parseInt(x6,10) + parseInt(x7,10);
+document.getElementById(divtag1[j]).style.width=x8;
+//document.getElementById(divtag1[j]).innerHTML=x9;
+};
+};
+
+// function to change the height of a single specified bar
+function change_individual(){
+var x10 = document.getElementById('width2').value;
+var x11 = document.getElementById('width3').value;
+var x12 = document.getElementById(divtag1[x10-1]).style.height;
+var x13 = parseInt(x11,10) + parseInt(x12,10) + "px";
+var x14 = parseInt(x11,10) + parseInt(x12,10);
+document.getElementById(divtag1[x10-1]).innerHTML=x14;
+document.getElementById(divtag1[x10-1]).style.height=x13;
+}
+
+</script>
+
+<label id="ht">VALUE FOR HEIGHT</label><br>
+<input id= "height1" type="text" name="value1" value="">
+<button id="Button1" type="button" onclick="change()">CHANGE HEIGHT</button>
+<label id="wt">VALUE FOR WIDTH</label><br>
+<input id="width1" type="text" name="value2" value="">
+<button id="Button2" type="button" onclick="change1()">CHANGE WIDTH</button>
+<label id="ht_ind">ENTER INDIVIDUAL BAR NUMBER</label><br>
+<input id="width2" type="text" name="value3" value="">
+<button id="Button3" type="button" onclick="change_individual()">CHANGE HEIGHT</button>
+<label id="ht_ind1">VALUE FOR HEIGHT</label><br>
+<input id="width3" type="text" name="value4" value="">
+
+</body>
